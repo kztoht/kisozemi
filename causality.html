@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>因果関係の考え方</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url("cover.jpg") no-repeat center center;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .content-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .footer {
+      margin-top: auto;
+      margin-bottom: 20px;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .intro-text {
+        font-size: 1em;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content-container">
+
+    <h1>因果関係の考え方</h1>
+    <div class="intro-text">
+      <p>
+        <strong>相関関係</strong>とは、2つの物事が一緒に変動することを指します。たとえば、片方が増えるときにもう片方も増える（あるいは減る）といった統計的なパターンを観察できる状態です。ただし、相関があるからといって、一方が他方を引き起こしている（原因になっている）とは限りません。
+      </p>
+      <p>
+        <strong>因果関係</strong>は、一方がもう一方を直接的に引き起こす、すなわち「原因と結果」の関係が成り立つことを指します。因果関係を成立させるには、単に相関があるだけでは不十分で、実験や追加の統計的検証など、より厳密な方法で「原因と結果」を証明する必要があります。
+      </p>
+      <p>
+        相関が観察されても、その背景には隠れた要因が存在するかもしれません。また、偶然による相関も考えられるため、相関を見つけたときには「本当に片方が原因となっているのか？」を意識して検証することが大切です。
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2023 都立大大槻基礎ゼミ</p>
+    </div>
+  </div>
+</body>
+</html>
