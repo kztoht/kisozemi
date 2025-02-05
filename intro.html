@@ -4,40 +4,33 @@
   <meta charset="UTF-8" />
   <title>ゼミの概要</title>
   <style>
-    /* 全体の基本スタイル */
+    
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      /* 背景色（画像周りに余白が発生したときに見える） */
       background-color: #f4f4f4;
 
-      /* 擬似要素で背景画像を表示するため、position: relative; を指定 */
       position: relative;
       min-height: 100vh;
     }
 
-    /* body の擬似要素で背景画像を表示・透過 */
     body::before {
       content: "";
-      position: fixed; /* 画面全体を覆う */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
 
-      /* 画像をアスペクト比を維持して表示するため contain を使用 */
       background: url("intro.jpg") center center no-repeat;
       background-size: contain;
 
-      /* 画像を少し透過させる（0.7 = 70%の不透明度） */
-      opacity: 0.7;
-
-      /* 背景要素を一番奥に配置 */
+      opacity: 0.5;
+      
       z-index: -1;
     }
 
-    /* オーバーレイ（背景を少し暗くする） */
     .overlay {
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -48,10 +41,9 @@
       z-index: 1;
     }
 
-    /* コンテンツ表示領域 */
     .content-container {
       position: relative;
-      z-index: 2; /* オーバーレイの上にくるように */
+      z-index: 2;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -61,7 +53,6 @@
       box-sizing: border-box;
     }
 
-    /* タイトル */
     h1 {
       color: #fff;
       margin-top: 60px;
@@ -70,7 +61,6 @@
       text-align: center;
     }
 
-    /* 本文 */
     .intro-text {
       max-width: 800px;   /* 横幅を制限して読みやすく */
       background-color: rgba(255, 255, 255, 0.9);
@@ -81,7 +71,6 @@
       margin-bottom: 40px;
     }
 
-    /* フッターや戻るリンクなど（任意） */
     .footer {
       margin-top: auto;
       margin-bottom: 20px;
@@ -90,7 +79,6 @@
       font-size: 0.9em;
     }
 
-    /* レスポンシブデザイン：スマホで文字が読みやすくなるように */
     @media (max-width: 600px) {
       h1 {
         font-size: 1.4em;
@@ -128,8 +116,8 @@
 
     <div class="footer">
       <p>&copy; 2023 都立大大槻基礎ゼミ</p>
-      <!-- 必要に応じてトップページへのリンクなどを追加しても良い -->
-      <!-- 例：<p><a href="index.html" style="color: #fff;">ホームに戻る</a></p> -->
+
+      <p><a href="index.html" style="color: #fff;">ゼミのホームに戻る</a></p>
     </div>
   </div>
 </body>
