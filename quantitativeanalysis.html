@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>社会を統計的に分析するということ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("intro.jpg") center center no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .content-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    h3 {
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      margin-top: auto;
+      margin-bottom: 20px;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .intro-text {
+        font-size: 1em;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content-container">
+    <h1>社会を統計的に分析するということ</h1>
+    <div class="intro-text">
+      <p>
+        現代社会は、少子高齢化、環境問題、ジェンダー不均衡など多様な社会・政治的課題に直面しています。こうした複雑な問題を理解し、解決へ向けた議論を進めるために、データに基づいた分析は非常に重要な役割を担っています。
+      </p>
+      
+      <h2>質的分析と計量分析の違い</h2>
+      <p>
+        質的分析は、インタビューや観察、文献調査などを通して、物事の背景や意味、文脈に焦点を当てた方法です。たとえば、個々の体験や意見、文化的背景を深く掘り下げることで、現象の「なぜ」や「どうして」を明らかにします。
+      </p>
+      <p>
+        一方、計量分析は、数値データや統計手法を用いて客観的・再現可能な結果を導く方法です。大量のデータからパターンや因果関係を明らかにし、政策決定や社会現象の一般化を図ることができます。
+      </p>
+      
+      <h2>それぞれのメリット</h2>
+      <h3>質的分析のメリット</h3>
+      <ul>
+        <li>現象の背景や文脈、複雑なニュアンスを詳細に理解できる</li>
+        <li>個々のケースに対する深い洞察が得られる</li>
+        <li>新たな仮説の発見や、数値だけでは捉えきれない側面を明らかにするのに適している</li>
+      </ul>
+      
+      <h3>計量分析のメリット</h3>
+      <ul>
+        <li>客観的かつ再現性のある結果を提供できる</li>
+        <li>多くのデータをもとに一般的な傾向や因果関係を見出すことが可能</li>
+        <li>政策立案や社会的意思決定のエビデンスとして説得力がある</li>
+      </ul>
+      
+      <h2>なぜ現代に計量分析が重視されるのか</h2>
+      <h3>データの豊富さと解析技術の進展</h3>
+      <p>
+        コンピュータの処理能力や統計解析の手法の進化により、膨大なデータを効率的に処理・分析できるようになりました。これにより、従来は把握が難しかった社会現象のパターンや因果関係を、客観的に明らかにすることが可能になっています。
+      </p>
+      
+      <h3>エビデンスに基づく意思決定</h3>
+      <p>
+        政策やビジネスの現場では、主観に頼らない客観的な根拠が求められるようになりました。計量分析は、データに基づく判断材料として、透明性と説得力を提供します。
+      </p>
+      
+      <h3>社会的意義</h3>
+      <p>
+        統計データに基づく分析は、社会問題の本質やその背景を浮き彫りにし、持続可能な解決策の検討に寄与します。定量的な視点は、単なる数字の羅列にとどまらず、社会全体の現状や未来を見通すための有力なツールとして位置付けられています。
+      </p>
+    </div>
+    
+    <div class="footer">
+      <p><a href="index.html" style="color: #fff;">ゼミのホームに戻る</a></p>
+    </div>
+  </div>
+</body>
+</html>
