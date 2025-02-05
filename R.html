@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>データ分析プログラム言語Rとは</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      position: relative;
+      min-height: 100vh;
+    }
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("intro.jpg") center center no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    .content-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+    
+    .intro-text {
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    
+    .footer {
+      margin-top: auto;
+      margin-bottom: 20px;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .intro-text {
+        font-size: 1em;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content-container">
+    <h1>Rとはなんぞや</h1>
+    <div class="intro-text">
+      <p>
+        Rは、データ分析や統計処理を行うための無料で使えるプログラミング言語です。プログラムや統計の知識がほとんどなく、むしろ恐怖心を抱いてしまう大学一年生でも、授業で基礎を学び、現代の生成AIなどの支援ツールを活用すれば、誰でも簡単に使いこなせる優れた分析道具となります。
+      </p>
+      <p>
+        Rは世界中の研究者やデータサイエンティスト、エンジニアたちの協力によって進化してきたツールです。そのため、常に最新の技術や手法が取り入れられており、実際に使ってみると、その柔軟性や実用性に驚かされることでしょう。
+      </p>
+      <p>
+        つまり、Rは「難しい」と思われがちですが、実際は誰もがデータから価値を引き出すために利用できる、身近で強力なツールなのです。まずは一歩踏み出して、Rの世界を体験してみましょう！
+      </p>
+    </div>
+    <div class="footer">
+      <p><a href="index.html" style="color: #fff;">ゼミのホームに戻る</a></p>
+    </div>
+  </div>
+</body>
+</html>
