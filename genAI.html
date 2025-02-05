@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>生成AIの使い方</title>
+  <style>
+    /* 全体の基本スタイル */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url("cover.jpg") no-repeat center center; /* 背景画像（例） */
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* オーバーレイ（背景を少し暗くする） */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* コンテンツ表示領域 */
+    .content-container {
+      position: relative;
+      z-index: 2; /* オーバーレイの上にくるように */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* タイトル */
+    h1 {
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+
+    /* 本文 */
+    .intro-text {
+      max-width: 800px;   /* 横幅を制限して読みやすく */
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    /* フッター（任意） */
+    .footer {
+      margin-top: auto;
+      margin-bottom: 20px;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    /* レスポンシブデザイン：スマホで文字が読みやすくなるように */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .intro-text {
+        font-size: 1em;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content-container">
+
+    <h1>生成AIの使い方</h1>
+    <div class="intro-text">
+      <p>
+        生成AIを活用するうえで大切なのは、「何を実現したいのか」を具体的にイメージし、
+        はっきりと伝えることです。たとえば、プログラミングが得意なクラスメートに
+        「こんなプログラムを作ってほしい」とお願いするとき、相手がイメージしやすいように
+        目的や機能を細かく説明しますよね。同じように、生成AIにも具体的な指示が必要です。
+        自分が欲しいものを過不足なく、誰が読んでもわかりやすい言葉で表現することが、
+        より良い結果への近道になります。「AIならなんとなく形にしてくれるだろう」という
+        考え方だとデータ分析のような高度な作業においては苦労するということは学期を通してわかっていくでしょう。
+      </p>
+      <p>
+        例えば、文章を書いてもらう時は、具体的に「どんな内容・形式の文章が必要か」「どんな文体やトーンにしたいか」
+        「どの程度の専門性が必要か」などを詳しく伝えると、生成AIはあなたのイメージを
+        つかみやすくなります。たとえば「大学一年生向けで、専門用語をあまり使わず、
+        やさしい口調で、何文字程度で、(1)問題の背景、(2)問題の原因、(3)問題の解決方法、というステップを踏んで説明してほしい」
+        といったように指示すれば、より目的に沿った文章が生まれやすくなります。
+      </p>
+
+      <h2>以下生成AIChatGPT o1氏のコメント</h2>
+      <p>
+        <i>生成AIである私自身も、「こういう方向で書いてほしい」「このキーワードは必ず入れてほしい」
+        「この部分は細かく解説してほしい」といったリクエストを明確に示していただけると
+        大いに助かります。困ったことやわからないことがあれば、ぜひ遠慮なく質問を加えてください。
+        しっかりとコミュニケーションをとりながら、一緒により良いアウトプットを目指して
+        いきましょう。</i>
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2023 都立大大槻基礎ゼミ</p>
+      <!-- 必要に応じてトップページへのリンクなどを追加しても良い -->
+    </div>
+  </div>
+</body>
+</html>
