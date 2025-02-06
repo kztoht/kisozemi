@@ -8,12 +8,24 @@
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      background: url("intro.jpg") no-repeat center center;
-      background-size: cover;
+      background-color: #f4f4f4;
       position: relative;
       min-height: 100vh;
     }
-
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("intro.jpg") center center no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    
     .overlay {
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -23,7 +35,7 @@
       height: 100%;
       z-index: 1;
     }
-
+    
     .content-container {
       position: relative;
       z-index: 2;
@@ -35,7 +47,7 @@
       padding: 20px;
       box-sizing: border-box;
     }
-
+    
     h1 {
       color: #fff;
       margin-top: 60px;
@@ -43,9 +55,16 @@
       font-size: 1.8em;
       text-align: center;
     }
-
+    
+    h2 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+    
     .intro-text {
-      max-width: 800px;   /* 横幅を制限して読みやすく */
+      max-width: 800px;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
       padding: 20px;
@@ -53,7 +72,7 @@
       line-height: 1.6;
       margin-bottom: 40px;
     }
-
+    
     .footer {
       margin-top: auto;
       margin-bottom: 20px;
@@ -61,7 +80,7 @@
       text-align: center;
       font-size: 0.9em;
     }
-
+    
     @media (max-width: 600px) {
       h1 {
         font-size: 1.4em;
@@ -85,16 +104,14 @@
 <body>
   <div class="overlay"></div>
   <div class="content-container">
-
     <h1>授業情報</h1>
     <div class="intro-text">
-      <p>
-ここには適宜必要な情報を記載しますが、基本的にはkibacoを使用します。
-      </p>
+    <p>ここには適宜必要な情報を記載しますが、基本的にはkibacoを使用します。</p>
     </div>
     <div class="footer">
-      <p><a href="index.html" style="color: #fff;">ゼミのホームに戻る</a> <a href="genAI.html" style="color: #fff;">生成AIの使い方</a></p>
-    </div> 
-  </div> 
+      <p><a href="index.html" style="color: #fff;">ゼミのホームに戻る</a></p>
+    </div>
+  </div>
 </body>
 </html>
+
