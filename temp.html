@@ -1,20 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>都立大大槻基礎ゼミ</title>
+  <!-- スマホ対応のための設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 画面幅固定のサンプル（Landscape Productsを踏襲） -->
-  <meta name="viewport" content="width=1024">
-
-  <!-- キーワードやディスクリプションはお好みで -->
-  <meta name="keywords" content="基礎ゼミ, 大学, データ分析, 因果関係, 統計">
-  <meta name="description" content="都立大大槻基礎ゼミのホームページ。データ分析や因果関係、生成AIの活用法などを学べます。">
-  
-  <!-- 必要であれば外部CSSを指定 -->
-  <link rel="stylesheet" href="style.css" type="text/css">
-
-  <!-- Google Analytics を使う場合のスクリプト（例） -->
+  <!-- お好みでGoogle Analyticsなどのスクリプトを入れてください -->
+  <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN465J8954"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,107 +15,133 @@
     gtag('js', new Date());
     gtag('config', 'G-HN465J8954');
   </script>
+  -->
 
-  <style type="text/css">
-    /* ----------------------------------
-       ここから先はサンプル用の簡易CSS
-       （style.css を読み込むならそちらに書いてもOK）
-    ---------------------------------- */
-
-    body {
+  <style>
+    /* Reset & Base */
+    * {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
-      background-color: #fff;
+      box-sizing: border-box;
     }
-
-    /* メインコンテナ */
-    #wrapper {
-      width: 1024px;     /* 提示例のように固定幅 */
-      margin: 0 auto;
-      background: #f9f9f9;
+    body {
+      font-family: sans-serif;
+      background: url("cover.jpg") center center no-repeat;
+      background-size: cover;
       min-height: 100vh;
       position: relative;
+      /* スクロールが発生しても全体が背景になるように */
     }
 
-    /* タイトル */
+    /* 半透明オーバーレイ（背景が暗くて文字が見やすいように） */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* ここで透過度を調整 */
+      z-index: 0; /* 後述の要素より背面に */
+    }
+
+    /* ページ全体を包むラッパ */
+    #wrapper {
+      position: relative;
+      z-index: 1; /* オーバーレイより前面に表示する */
+      min-height: 100vh;
+      /* 横幅を固定せず、レスポンシブで広がるように */
+    }
+
+    /* タイトル（上部に余白を作って左上に配置） */
     h1 {
-      margin: 0;
+      color: #fff;
       padding: 20px;
       font-size: 1.8em;
-      background: #333;
-      color: #fff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
 
-    /* ナビゲーション */
+    /* ナビゲーション（左に縦並び） */
     nav {
-      background: #eee;
-      padding: 10px 0;
+      margin: 20px;        /* タイトルの下に少し余白 */
     }
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;       /* 横並びにする例 */
-      flex-wrap: wrap;     /* 狭い時に折り返し可 */
     }
-    nav ul li {
-      margin: 0;
-      padding: 0;
+    nav li {
+      margin-bottom: 10px; /* 各リンクの間にスペース */
     }
-    nav ul li a {
-      display: block;
-      padding: 10px 15px;
-      color: #000;
+    nav a {
+      color: #fff;
       text-decoration: none;
-      border-right: 1px solid #ccc;
-      font-size: 1em;
+      font-size: 1.1em;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      padding: 10px 15px;
+      display: inline-block;
+      transition: 0.3s;
+      /* 背景は透明で、ホバー時に反転 */
     }
-    nav ul li a:hover {
-      background: #ccc;
-    }
-    /* 末尾のボーダー消し */
-    nav ul li:last-child a {
-      border-right: none;
+    nav a:hover {
+      background: #fff;
+      color: #000;
     }
 
-    /* スライドショー領域（サンプル） */
+    /* 画像やスライダーを表示する領域（任意） */
     #slideWrapper {
-      width: 100%;
-      height: 460px; /* お好みの高さに */
-      overflow: hidden;
+      margin: 40px auto;    /* 左右中央寄せ */
+      max-width: 800px;     /* 画像の最大横幅を制限 */
       text-align: center;
-      position: relative;
-      background: #ddd; /* 画像がなかったときの背景 */
     }
     #slideWrapper img {
-      width: auto;
-      height: 100%;
-      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    /* フッター */
+    /* フッター（本例では要らないということなので空） */
     footer {
       text-align: center;
       padding: 20px;
-      background: #333;
-      color: #fff;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      color: #ccc;
     }
 
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.6em;
+        padding: 15px;
+      }
+      nav {
+        margin: 15px;
+      }
+      nav a {
+        font-size: 1em;
+        padding: 8px 12px;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2em;
+      }
+      nav {
+        margin: 10px;
+      }
+      nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div id="wrapper"><!--test-->
-
+  <div id="wrapper">
     <!-- タイトル -->
     <h1>都立大大槻基礎ゼミ</h1>
-    
-    <!-- ナビゲーション -->
+
+    <!-- ナビゲーション（左寄せ縦並び） -->
     <nav>
-      <ul id="navSec1">
+      <ul>
         <li><a href="intro.html">ゼミの概要</a></li>
         <li><a href="quantitativeanalysis.html">社会を統計的に分析するということ</a></li>
         <li><a href="R.html">データ分析プログラム言語「R」とは</a></li>
@@ -132,20 +151,14 @@
         <li><a href="instructor.html">担当教員紹介</a></li>
       </ul>
     </nav>
-    
-    <!-- スライドショーのラッパ -->
+
+    <!-- スライドや画像など、必要なら表示（任意） -->
     <div id="slideWrapper">
-      <!-- ここではサンプルとして1枚画像を表示 -->
-      <img src="cover.jpg" alt="ゼミメインイメージ">
-      <!-- 実際にスライド切り替えなどを行いたい場合は
-           jQueryプラグイン等を組み込み、複数画像を配列で扱います -->
+      <img src="cover.jpg" alt="ゼミメインイメージのサンプル">
     </div>
-    
-    <!-- フッター -->
-    <footer>
-      <small>&copy; 2025 都立大大槻基礎ゼミ All Rights Reserved.</small>
-    </footer>
-    
+
+    <!-- フッター（今回は文言不要と指示があったため中身なし） -->
+    <footer></footer>
   </div>
 </body>
 </html>
