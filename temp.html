@@ -2,14 +2,83 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>都立大大槻基礎ゼミ</title>
+  <title>都立大大槻基礎ゼミへようこそ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="基礎ゼミ, 大学, データ分析, 因果関係, 統計">
   <meta name="description" content="都立大大槻基礎ゼミのホームページ。データ分析や因果関係、生成AIの活用法などを学べます。">
   
-  <link rel="stylesheet" href="style.css" type="text/css">
-
-  <!-- Google Analytics (例) -->
+  <style type="text/css">
+    /* 基本設定 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #fff;
+    }
+    /* ラッパー：最大幅1024pxの中央寄せ */
+    #wrapper {
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      position: relative;
+      padding: 0;
+    }
+    /* スライドショー領域（背景画像） */
+    #slideWrapper {
+      position: relative;
+      height: 460px;
+      background: url("cover.jpg") no-repeat center center;
+      background-size: cover;
+    }
+    /* 中央に配置するナビゲーションコンテナ */
+    .nav-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    /* タイトル */
+    .nav-container h1 {
+      color: #fff;
+      margin-bottom: 50px;
+      font-size: 2em;
+    }
+    /* リンクリスト（①のスタイル） */
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links li {
+      margin: 15px 0;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+    .nav-links a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    /* スマホ表示の調整 */
+    @media (max-width: 600px) {
+      .nav-container h1 {
+        font-size: 1.5em;
+      }
+      .nav-links a {
+        font-size: 1.3em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN465J8954"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,82 +86,13 @@
     gtag('js', new Date());
     gtag('config', 'G-HN465J8954');
   </script>
-
-  <style type="text/css">
-    /* ベース設定 */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #fff;
-    }
-    /* メインラッパー：背景色を白にし、下部パディングを除去 */
-    #wrapper {
-      width: 100%;
-      max-width: 1024px;
-      margin: 0 auto;
-      background: #fff;
-      min-height: 100vh;
-      position: relative;
-      padding: 20px 20px 0 20px;  /* 下部パディング0 */
-    }
-    /* タイトル */
-    h1 {
-      margin: 0;
-      padding: 20px;
-      font-size: 1.8em;
-      background: #333;
-      color: #fff;
-    }
-    /* スライドショー領域：背景画像としてcover.jpgを指定 */
-    #slideWrapper {
-      position: relative;
-      height: 460px;
-      background: url("cover.jpg") no-repeat center center;
-      background-size: cover;
-      margin-top: 20px;
-    }
-    /* ナビゲーション：背景画像の上にオーバーレイ表示し、半透明の背景を追加 */
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.8); /* 半透明の白 */
-      padding: 10px;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      display: block;
-      padding: 10px 15px;
-      color: #000;
-      text-decoration: none;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
-      font-size: 1em;
-    }
-    nav ul li a:hover {
-      background: #ccc;
-    }
-    nav ul li:last-child a {
-      border-bottom: none;
-    }
-  </style>
 </head>
 <body>
   <div id="wrapper">
-    <h1>都立大大槻基礎ゼミ</h1>
-    
     <div id="slideWrapper">
-      <nav>
-        <ul id="navSec1">
+      <div class="nav-container">
+        <h1>都立大大槻基礎ゼミへようこそ</h1>
+        <ul class="nav-links">
           <li><a href="intro.html">ゼミの概要</a></li>
           <li><a href="quantitativeanalysis.html">社会を統計的に分析するということ</a></li>
           <li><a href="R.html">データ分析プログラム言語「R」とは</a></li>
@@ -101,7 +101,7 @@
           <li><a href="classes.html">授業情報</a></li>
           <li><a href="instructor.html">担当教員紹介</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
   </div>
 </body>
