@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>都立大大槻基礎ゼミ</title>
-  <!-- スマホ対応のための設定 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- お好みでGoogle Analyticsなどのスクリプトを入れてください -->
-  <!--
+  <!-- レスポンシブ対応 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="基礎ゼミ, 大学, データ分析, 因果関係, 統計">
+  <meta name="description" content="都立大大槻基礎ゼミのホームページ。データ分析や因果関係、生成AIの活用法などを学べます。">
+  
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  <!-- Google Analytics (例) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN465J8954"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,122 +20,87 @@
     gtag('js', new Date());
     gtag('config', 'G-HN465J8954');
   </script>
-  -->
 
-  <style>
-    /* Reset & Base */
-    * {
+  <style type="text/css">
+    /* 基本設定 */
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
       font-family: sans-serif;
-      background: url("cover.jpg") center center no-repeat;
-      background-size: cover;
-      min-height: 100vh;
-      position: relative;
-      /* スクロールが発生しても全体が背景になるように */
+      background-color: #fff;
     }
 
-    /* 半透明オーバーレイ（背景が暗くて文字が見やすいように） */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; 
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* ここで透過度を調整 */
-      z-index: 0; /* 後述の要素より背面に */
-    }
-
-    /* ページ全体を包むラッパ */
+    /* メインコンテナ（レスポンシブ対応） */
     #wrapper {
-      position: relative;
-      z-index: 1; /* オーバーレイより前面に表示する */
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      background: #f9f9f9;
       min-height: 100vh;
-      /* 横幅を固定せず、レスポンシブで広がるように */
+      position: relative;
+      padding: 20px;
     }
 
-    /* タイトル（上部に余白を作って左上に配置） */
+    /* タイトル */
     h1 {
-      color: #fff;
+      margin: 0;
       padding: 20px;
       font-size: 1.8em;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    }
-
-    /* ナビゲーション（左に縦並び） */
-    nav {
-      margin: 20px;        /* タイトルの下に少し余白 */
-    }
-    nav ul {
-      list-style: none;
-    }
-    nav li {
-      margin-bottom: 10px; /* 各リンクの間にスペース */
-    }
-    nav a {
+      background: #333;
       color: #fff;
-      text-decoration: none;
-      font-size: 1.1em;
-      border: 2px solid #fff;
-      border-radius: 5px;
-      padding: 10px 15px;
-      display: inline-block;
-      transition: 0.3s;
-      /* 背景は透明で、ホバー時に反転 */
-    }
-    nav a:hover {
-      background: #fff;
-      color: #000;
     }
 
-    /* 画像やスライダーを表示する領域（任意） */
+    /* 画像とナビゲーションを並べるフレックスコンテナ */
+    #mainContent {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    /* 画像エリア */
     #slideWrapper {
-      margin: 40px auto;    /* 左右中央寄せ */
-      max-width: 800px;     /* 画像の最大横幅を制限 */
-      text-align: center;
+      flex: 1;
+      height: 460px; /* お好みの高さ */
+      overflow: hidden;
+      background: #ddd;
+      position: relative;
     }
     #slideWrapper img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
+      max-width: 100%;
       display: block;
     }
 
-    /* フッター（本例では要らないということなので空） */
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #ccc;
+    /* ナビゲーションエリア */
+    nav {
+      width: 200px; /* 必要に応じて調整 */
+      background: #eee;
+      padding: 10px;
     }
-
-    /* レスポンシブ対応 */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.6em;
-        padding: 15px;
-      }
-      nav {
-        margin: 15px;
-      }
-      nav a {
-        font-size: 1em;
-        padding: 8px 12px;
-      }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.2em;
-      }
-      nav {
-        margin: 10px;
-      }
-      nav a {
-        font-size: 0.9em;
-        padding: 6px 10px;
-      }
+    nav ul li {
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      color: #000;
+      text-decoration: none;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+      font-size: 1em;
+    }
+    nav ul li a:hover {
+      background: #ccc;
+    }
+    nav ul li:last-child a {
+      border-bottom: none;
     }
   </style>
 </head>
@@ -138,27 +108,29 @@
   <div id="wrapper">
     <!-- タイトル -->
     <h1>都立大大槻基礎ゼミ</h1>
-
-    <!-- ナビゲーション（左寄せ縦並び） -->
-    <nav>
-      <ul>
-        <li><a href="intro.html">ゼミの概要</a></li>
-        <li><a href="quantitativeanalysis.html">社会を統計的に分析するということ</a></li>
-        <li><a href="R.html">データ分析プログラム言語「R」とは</a></li>
-        <li><a href="genAI.html">生成AIの使い方</a></li>
-        <li><a href="causality.html">因果関係を考える</a></li>
-        <li><a href="classes.html">授業情報</a></li>
-        <li><a href="instructor.html">担当教員紹介</a></li>
-      </ul>
-    </nav>
-
-    <!-- スライドや画像など、必要なら表示（任意） -->
-    <div id="slideWrapper">
-      <img src="cover.jpg" alt="ゼミメインイメージのサンプル">
+    
+    <!-- 画像とナビゲーションを並べるエリア -->
+    <div id="mainContent">
+      <!-- スライドショー/画像エリア -->
+      <div id="slideWrapper">
+        <img src="cover.jpg" alt="ゼミメインイメージ">
+      </div>
+      
+      <!-- ナビゲーション（縦並び、左揃え） -->
+      <nav>
+        <ul id="navSec1">
+          <li><a href="intro.html">ゼミの概要</a></li>
+          <li><a href="quantitativeanalysis.html">社会を統計的に分析するということ</a></li>
+          <li><a href="R.html">データ分析プログラム言語「R」とは</a></li>
+          <li><a href="genAI.html">生成AIの使い方</a></li>
+          <li><a href="causality.html">因果関係を考える</a></li>
+          <li><a href="classes.html">授業情報</a></li>
+          <li><a href="instructor.html">担当教員紹介</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- フッター（今回は文言不要と指示があったため中身なし） -->
-    <footer></footer>
+    
+    <!-- フッターは削除済み -->
   </div>
 </body>
 </html>
