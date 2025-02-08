@@ -14,7 +14,7 @@
       background-size: cover;
       position: relative;
     }
-    /* 全体を暗めにするオーバーレイ（変更前と同じ） */
+    /* 全体を暗くするオーバーレイ */
     .overlay {
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -24,7 +24,7 @@
       height: 100%;
       z-index: 1;
     }
-    /* コンテンツを中央配置 */
+    /* 中央配置のコンテナ */
     .container {
       position: relative;
       z-index: 2;
@@ -34,18 +34,16 @@
       align-items: center;
       height: 100vh;
     }
-    /* ヘッダー（タイトル） */
+    /* タイトル */
     h1 {
       color: #fff;
       margin-bottom: 30px;
       text-align: center;
     }
-    /* リンク部分のコンテナ：②のように薄い背景を付ける */
+    /* リンク部分のコンテナ（背景は透明） */
     .nav-box {
-      background: rgba(255, 255, 255, 0.8); /* 半透明の白 */
       padding: 20px;
-      border-radius: 5px;
-      text-align: left;  /* 内部は左揃え */
+      text-align: left;
     }
     /* リンクリストのスタイル */
     .nav-box ul {
@@ -57,18 +55,18 @@
       margin: 15px 0;
     }
     .nav-box a {
-      color: #000;
+      color: #fff;
       text-decoration: none;
       font-size: 1.1em;
       display: block;
       padding: 10px 20px;
-      border: 2px solid #000;
-      border-radius: 5px;
+      border: 2px solid #fff; /* 枠部分だけ白抜き */
+      border-radius: 0;      /* 真四角の枠 */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
     .nav-box a:hover {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
     }
     /* スマホ表示の調整 */
     @media (max-width: 600px) {
