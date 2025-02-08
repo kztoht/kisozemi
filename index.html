@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>都立大大槻基礎ゼミへようこそ</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    /* 背景画像を画面いっぱいに表示 */
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
       background: url("cover.jpg") no-repeat center center;
       background-size: cover;
+      position: relative;
     }
-
+    /* 全体を暗くするオーバーレイ */
     .overlay {
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -23,7 +24,7 @@
       height: 100%;
       z-index: 1;
     }
-
+    /* 中央配置のコンテナ */
     .container {
       position: relative;
       z-index: 2;
@@ -32,70 +33,72 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      text-align: center;
     }
-
+    /* タイトル */
     h1 {
       color: #fff;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+      text-align: center;
     }
-
-    .nav-links {
+    /* リンク部分のコンテナ（背景は透明） */
+    .nav-box {
+      padding: 20px;
+      text-align: left;
+    }
+    /* リンクリストのスタイル */
+    .nav-box ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
-
-    .nav-links li {
+    .nav-box li {
       margin: 15px 0;
     }
-
-    .nav-links a {
+    .nav-box a {
       color: #fff;
       text-decoration: none;
       font-size: 1.1em;
+      display: block;
       padding: 10px 20px;
-      border: 2px solid #fff;
-      border-radius: 5px;
+      border: 2px solid #fff; /* 枠部分だけ白抜き */
+      border-radius: 0;      /* 真四角の枠 */
       transition: background-color 0.3s ease, color 0.3s ease;
-      display: inline-block;
     }
-
-    .nav-links a:hover {
+    .nav-box a:hover {
       background-color: #fff;
       color: #000;
     }
-
     /* スマホ表示の調整 */
     @media (max-width: 600px) {
-      .nav-links a {
+      .nav-box a {
         font-size: 1.3em;
         padding: 10px 20px;
       }
     }
   </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN465J8954"></script>
-    <script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN465J8954"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-HN465J8954');
-    </script>
-  
+  </script>
 </head>
 <body>
   <div class="overlay"></div>
-
   <div class="container">
     <h1>都立大大槻基礎ゼミへようこそ</h1>
-    <ul class="nav-links">
-      <li><a href="intro.html">ゼミの概要</a></li>
-      <li><a href="quantitativeanalysis.html">社会を統計的に分析するということ</a></li>
-      <li><a href="R.html">データ分析プログラム言語「R」とは</a></li>
-      <li><a href="genAI.html">生成AIの使い方</a></li>
-      <li><a href="causality.html">因果関係を考える</a></li>
-      <li><a href="classes.html">授業情報</a></li>
-      <li><a href="instructor.html">担当教員紹介</a></li>
-    </ul>
+    <div class="nav-box">
+      <ul>
+        <li><a href="intro.html">ゼミの概要</a></li>
+        <li><a href="quantitativeanalysis.html">社会を統計的に分析するということ</a></li>
+        <li><a href="R.html">データ分析プログラム言語「R」とは</a></li>
+        <li><a href="genAI.html">生成AIの使い方</a></li>
+        <li><a href="causality.html">因果関係を考える</a></li>
+        <li><a href="classes.html">授業情報</a></li>
+        <li><a href="instructor.html">担当教員紹介</a></li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
