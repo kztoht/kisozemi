@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>都立大大槻基礎ゼミ</title>
-
-  <!-- レスポンシブ対応 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="keywords" content="基礎ゼミ, 大学, データ分析, 因果関係, 統計">
   <meta name="description" content="都立大大槻基礎ゼミのホームページ。データ分析や因果関係、生成AIの活用法などを学べます。">
   
@@ -22,25 +19,23 @@
   </script>
 
   <style type="text/css">
-    /* 基本設定 */
+    /* ベース設定 */
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
       background-color: #fff;
     }
-
-    /* メインコンテナ（レスポンシブ対応） */
+    /* メインラッパー：背景色を白にし、下部パディングを除去 */
     #wrapper {
       width: 100%;
       max-width: 1024px;
       margin: 0 auto;
-      background: #f9f9f9;
+      background: #fff;
       min-height: 100vh;
       position: relative;
-      padding: 20px;
+      padding: 20px 20px 0 20px;  /* 下部パディング0 */
     }
-
     /* タイトル */
     h1 {
       margin: 0;
@@ -49,34 +44,20 @@
       background: #333;
       color: #fff;
     }
-
-    /* 画像とナビゲーションを並べるフレックスコンテナ */
-    #mainContent {
-      display: flex;
-      flex-wrap: wrap;
+    /* スライドショー領域：背景画像としてcover.jpgを指定 */
+    #slideWrapper {
+      position: relative;
+      height: 460px;
+      background: url("cover.jpg") no-repeat center center;
+      background-size: cover;
       margin-top: 20px;
     }
-
-    /* 画像エリア */
-    #slideWrapper {
-      flex: 1;
-      height: 460px; /* お好みの高さ */
-      overflow: hidden;
-      background: #ddd;
-      position: relative;
-    }
-    #slideWrapper img {
-      width: auto;
-      height: 100%;
-      max-width: 100%;
-      display: block;
-    }
-
-    /* ナビゲーションエリア */
+    /* ナビゲーション：背景画像の上にオーバーレイ表示 */
     nav {
-      width: 200px; /* 必要に応じて調整 */
-      background: #eee;
-      padding: 10px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      /* 読みやすさのため、必要に応じて背景の透過設定など追加可 */
     }
     nav ul {
       list-style: none;
@@ -106,17 +87,9 @@
 </head>
 <body>
   <div id="wrapper">
-    <!-- タイトル -->
     <h1>都立大大槻基礎ゼミ</h1>
     
-    <!-- 画像とナビゲーションを並べるエリア -->
-    <div id="mainContent">
-      <!-- スライドショー/画像エリア -->
-      <div id="slideWrapper">
-        <img src="cover.jpg" alt="ゼミメインイメージ">
-      </div>
-      
-      <!-- ナビゲーション（縦並び、左揃え） -->
+    <div id="slideWrapper">
       <nav>
         <ul id="navSec1">
           <li><a href="intro.html">ゼミの概要</a></li>
@@ -129,8 +102,6 @@
         </ul>
       </nav>
     </div>
-    
-    <!-- フッターは削除済み -->
   </div>
 </body>
 </html>
