@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>先輩たちの研究その2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url("intro.jpg") no-repeat center center;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .content-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+      .senpai-text {
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .footer {
+      margin-top: auto;
+      margin-bottom: 20px;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .intro-text {
+        font-size: 1em;
+        padding: 15px;
+      }
+      .senpai-text {
+        font-size: 1em;
+        padding: 15px;
+      }
+    }
+  </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN465J8954"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HN465J8954');
+    </script>
+</head>
+  
+<body>
+  <div class="overlay"></div>
+  <div class="content-container">
+
+    <h1>先輩たちの研究その1</h1>
+    <div class="senpai-text">
+      <p>
+       先輩たちは、日本の各自治体において女性の就業率に影響を与えている要因を探ることにしました。まず直感的に考えて、都市部のほうが女性の就業に対するバイアスが少ないだろうから、女性の社会進出は人口の多い東京、神奈川、大阪等の地域で最も進んでいるのではないかと考えました。しかし、総務省による国勢調査のデータを見てみると、なんだか様子がおかしいことに気づきます。
+      </p>
+
+      <div style="text-align: center;">
+      <figure>
+      <img src="kokusei.gif" alt="総務省統計局「国勢調査」（令和２年）" style="max-width: 80%; height: auto;">
+      <figcaption><small>男女共同参画局HPより</small></figcaption>
+      </figure>
+      </div>
+
+      <p>
+      東京の女性就業率はほぼ全国平均並、神奈川や大阪に至っては最下位付近です。上位を占めているのは軒並み日本海側の「大都会」を有さない県です。ここで一旦仮説を振り出しに戻し、「都会」以外の要素と女性就業率の関係を見ていくことになります。大学に入学したばかりの彼女たち、当然次は女性の大卒割合と女性の就業率の相関を見てみることにします。さすがにこれは正の相関（一方が上がれば他方も上がる）が見られるだろう・・
+      </p>
+
+      <div style="text-align: center;">
+      <figure>
+      <img src="fdaisotsu_job.png" alt="女性就業率と大卒女性割合の相関" style="max-width: 50%; height: auto;">
+      <figcaption><small>各点は日本全国の市区町村を表しており、青い「回帰線」と呼ばれる直線は全体の傾向を示しています。みなさんもすぐにこのようなグラフが描けるようになるでしょう。
+      日本全国の市区町村のデータを使っているためデータの量は膨大ですが、現代のコンピューターは楽々と扱ってしまいます。</small></figcaption>
+      </figure>
+      </div>
+        
+      <p>
+      なんと、明らかな負の相関が！横軸の女性大卒割合が上がるほど、縦軸の女性就業率が下がっています。分析者たちにとっては衝撃的な結果ですが、これだけではまだ「女性の大学進学は就業率を下げる」という因果関係があるとは言えません。ここで試されるのが、「データを扱う」能力ではなく、社会の中で働く因果の関係を想像する力です。もしかしたら「専業主婦を養える年収を持つ男性の割合」にカギがあるのでは？男性の収入は学歴と相関しているからです。そこで、女性大卒割合（横軸）と男性大卒割合（縦軸）の相関を見てみると下図のように見事に比例関係にありました。
+      </p>
+
+      <div style="text-align: center;">
+      <figure>
+      <img src="daisotsu.png" alt="両性の就業率の相関" style="max-width: 50%; height: auto;">
+      <figcaption><small>男女大卒割合の相関</small></figcaption>      
+      </figure>
+      </div>
+      
+      <p>
+        これが意味するのは、女性大卒割合が高い地域は男性大卒割合も高いため、「女性大卒割合と女性就業率の関係」だけを見ても、それは「男性大卒割合と女性就業率の関係」も同時に見てしまっているということです。つまり、女性大卒割合と男性大卒割合それぞれの独立した影響を測る必要があるのです。こんな時に分析者の大きな味方となるのが、<strong>重回帰分析</strong>という分析手法です。この手法を使うと、複数の要素がそれぞれ持つ個別の影響を推定できます。
+      </p>
+
+      <div style="text-align: center;">
+      <figure>
+      <img src="regressionplot.jpg" alt="重回帰分析係数プロット" style="max-width: 50%; height: auto;">
+      <figcaption><small>重回帰分析係数プロット</small></figcaption>    
+      </figure>
+      </div>
+     <p>
+      上図は、先輩たちが実施した重回帰分析の結果をグラフにしたものです。黒い点はそれぞれの要素の影響度合いを、そこから伸びている「ヒゲ」は推定の精度を表しています。ヒゲが短いほど黒い点の位置を信頼できます（みなさんも学期を通じて理解することになりますが、このグラフのヒゲは全て「充分に短く」なっています）。縦軸が0の時に影響はなく、上に行くとプラスの相関、下に行くとマイナスの相関があるということになります。横軸に並んでいるのが各要素（「説明変数」と呼ばれます）で、左から切片（各要素の影響がなかった時の女性就業率）、女性大卒割合、女性人口割合、既婚率、男性大卒割合、核家族割合、と並んでいます。予想した通り、女性大卒割合（左から二番目）と男性大卒割合（右から二番目）は真逆の影響を与えていることがわかります。ざっと見るとあんなにきれいに比例していた両変数が、女性就業率には反対の影響を与えているということがひと目で見て取れます。つまり、東京においては「大卒女性が就業する力」と「大卒男性が専業主婦を養う力」が拮抗し、結果として全国平均に近い女性就業率に繋がっているのだろうと推論できます。
+     </p>
+       
+     <p>
+      社会のデータを分析すると、一見直感に反する結果が出ることがあります。今回のように、「女性の大卒割合が高い地域ほど、女性の就業率が低い」という意外な相関を目にしたとき、単純に「女性が大学を出ると働かなくなるのか？」と結論づけるのは早計です。実際は、背後には「その地域の男性の大卒割合が高く、高収入の男性が多いため、専業主婦になる選択肢が増える」といった別の要因が隠れていました。因果関係に近づくためには、「女性大卒割合の、男性大卒割合から独立した影響」を探り当てる必要がありました。
+     </p>
+     <p>
+      このように、社会のデータにおいてはさまざまな要素が絡み合っており、単純な相関関係を見つけるだけでは本当の因果関係はわかりません。どの要因が本当にどのような影響を与えているのかを見極めるには、統計的な手法を適切に使い、かつ、社会の仕組みを深く考える力も必要です。データを眺め、そこだけでは見えてこない「本当のつながり」を探る。このプロセスこそが、社会問題をデータで考える面白さであり、難しさでもあります。
+    </p>
+  </div>
+
+    <div class="footer">
+      <p><a href="index.html" style="color: #fff;">ゼミのホームに戻る</a>　<a href="classes.html" style="color: #fff;">授業情報</a></p>
+    </div>
+      
+</body>
+</html>
 
